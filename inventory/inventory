@@ -1,0 +1,2 @@
+13.233.93.120 ansible_ssh_user=ec2-user
+13.127.77.169 ansible_ssh_user=ubuntu

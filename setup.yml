@@ -1,0 +1,20 @@
+---
+- hosts: all
+  vars_files:
+       - "./variables/{{ ansible_facts['distribution'] }}.yml"
+  tasks:
+     - name: "Install Apache package"
+       package:
+           name: "{{ apache_package }}"
+           state: present
+
+     - name: "Copying Test Page"
+       copy:
+           dest: "{{ doc_root }}/index.html"
+           content: "{{ ansible_facts['distribution'] }}"
+
+     - name: "Starting Daemon"
+       service:
+             name: "{{ apache_daemon }}"
+             state: started
+             enabled: yes

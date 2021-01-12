@@ -1,0 +1,4 @@
+---
+apache_package: apache2
+apache_daemon: apache2
+doc_root: "/var/www/html"
