@@ -1,0 +1,4 @@
+---
+apache_package: "httpd"
+apache_daemon: "httpd"
+doc_root: "/var/www/html"
